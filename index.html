@@ -22,23 +22,23 @@
 
 <body>
     <div id="body-wrap">
-        <nav class="not_index_bg" id="nav" style="background-image:url(https://api.ixiaowai.cn/api/api.php)">
-            <div id="page_site-info">
-                <div id="site-title">
-                    <span class="blogtitle"></span>
-                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                    <script>
-                        var typed = new Typed(".blogtitle", {
-                            strings: ['求知若饥，虚心若愚', 'Stay Hungry Stay Foolish'],
-                            startDelay: 300,
-                            typeSpeed: 100,
-                            loop: true,
-                            backSpeed: 50,
-                            showCursor: true
-                        });
-                    </script>
-                </div>
+        <!--<nav class="not_index_bg" id="nav" style="background-image:url(https://api.ixiaowai.cn/api/api.php)">-->
+        <div id="page_site-info">
+            <div id="site-title">
+                <span class="blogtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed(".blogtitle", {
+                        strings: ['求知若饥，虚心若愚', 'Stay Hungry Stay Foolish'],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
             </div>
+        </div>
         </nav>
         <main id="content-outer">
             <div class="layout_page" id="content-inner">
@@ -46,12 +46,13 @@
                     <div class="card-widget card-info">
                         <div class="card-content">
                             <div class="card-info-avatar is-center">
-                                <img class="avatar-img" src="https://cdn.jsdelivr.net/gh/laoxuai/assert/images/20200125221102.png" alt="avatar">
+                                <img class="avatar-img" src="/static/image/logo.png" alt="avatar">
                                 <div class="author-info__name">duoxiaonian</div>
-                                <div class="author-info__description">00后，编程爱好者，略懂前端, <s>学生，实习</s>，缺乏社会的毒打</div>
+                                <div class="author-info__description">00后，编程爱好者，略懂前端, 在读大学生</div>
+                                <div class="author-info__description">这里也是梦幻书语的官网啦！</div>
                             </div>
                             <div class="card-info-social-icons is-center">
-                                <a class="social-icon" href="https://github.com/ybx77" target="_blank">
+                                <a class="social-icon" href="https://github.com/ybx77" target="">
                                     <i class="fa fa-github"></i>
                                 </a>
                             </div>
@@ -95,19 +96,35 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="card-widget card-announcement">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <span>我的文章</span>
+                            </div>
+                            <div>暂未开发</div>
+                        </div>
+                    </div>
+
+
                 </div>
                 <article id="page">
                     <div class="article-container">
                         <h2>音乐</h2>
-                        <meting-js auto="https://y.qq.com/n/yqq/playlist/7713574197.html">
-                        </meting-js>
+                        <!-- <meting-js auto="https://y.qq.com/n/yqq/playlist/7713574197.html">
+                        </meting-js>-->
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+                        <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+                        <meting-js server="kugou" type="playlist" id="3823475"></meting-js>
                         <hr>
 
                         <h2>技能</h2>
                         <div class="skillbox">
                             <div class="skillbar">
                                 <div class="skillbar-title" style="background: linear-gradient(to right, #FF0066 0%, #FF00CC 100%); width: 75%">
-                                    <span>Java</span>
+                                    <span>C语言</span>
                                 </div>
                                 <div class="skill-bar-percent">75%</div>
                             </div>
@@ -118,18 +135,18 @@
                                 <div class="skill-bar-percent">40%</div>
                             </div>
                             <div class="skillbar">
-                                <div class="skillbar-title" style="background: linear-gradient(to right, #2196F3 0%, #42A5F5 100%); width: 60%">
-                                    <span>Spring</span>
+                                <div class="skillbar-title" style="background: linear-gradient(to right, #2196F3 0%, #42A5F5 100%); width: 20%">
+                                    <span>后端</span>
                                 </div>
-                                <div class="skill-bar-percent">60%</div>
+                                <div class="skill-bar-percent">20%</div>
                             </div>
                             <div class="skillbar">
-                                <div class="skillbar-title" style="background: linear-gradient(to right, #00BCD4 0%, #80DEEA 100%); width: 70%">
-                                    <span>SpringMVC</span>
+                                <div class="skillbar-title" style="background: linear-gradient(to right, #00BCD4 0%, #80DEEA 100%); width: 40%">
+                                    <span>微信小程序</span>
                                 </div>
-                                <div class="skill-bar-percent">70%</div>
+                                <div class="skill-bar-percent">40%</div>
                             </div>
-                            <div class="skillbar">
+                            <!-- <div class="skillbar">
                                 <div class="skillbar-title" style="background: linear-gradient(to right, #00BCD4 0%, #f54009 100%); width: 80%">
                                     <span>SpringBoot</span>
                                 </div>
@@ -146,7 +163,7 @@
                                     <span>数据结构与算法</span>
                                 </div>
                                 <div class="skill-bar-percent">75%</div>
-                            </div>
+                            </div>-->
                         </div>
 
                         <hr>
@@ -192,9 +209,9 @@
     <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
-    <!-- 看板娘 -->
+    <!-- 看板娘
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-    <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script> -->
 
     <!--鼠标点击效果-->
     <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/maodian.js"></script>
@@ -204,7 +221,22 @@
         console.log("%c 有朋自远方来, 不亦说乎.", "background:#24272A; color:#ffffff", "");
         console.log("%c Github %c", "background:#24272A; color:#ffffff", "", "https://github.com/ybx77");
         console.log("%c 版本号: %c", "background:#24272A; color:#ffffff", "", "1.0.0");
+        //11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111输出文件目录
+        /* var directoryPath = "http://127.0.0.1:5501/article/book/"; // 替换为目标目录的路径
+         var fileNames = [];
 
+         $.ajax({
+             url: directoryPath,
+             success: function(data) {
+                 $(data).find("a").each(function() {
+                     var fileName = $(this).attr("href");
+                     //if (fileName !== "../" && fileName !== "./") {
+                     fileNames.push(fileName);
+                     //}
+                 });
+                 console.log(fileNames); // 在控制台中输出文件名数组
+             }
+         });*/
 
         (function($) {
             $.fn.snow = function(options) {

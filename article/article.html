@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章</title>
+</head>
+
+<body>
+    <p id="output">
+
+    </p>
+
+    <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+    <script>
+        var converter = new showdown.Converter();
+        /*
+        fetch('README.md')
+            .then(response => response.text())
+            .then(data => console.log(data))
+            .then(function(data) {
+                var markdownText = (data);
+                var htmlText = converter.makeHtml(markdownText);
+                document.getElementById("output").innerHTML = htmlText;
+            })
+            .catch(error => console.error(error));
+
+        */
+        fetch('https://040813.xyz/article/book/README.md')
+            .then(response => response.text())
+            .then(data => {
+                const readme = data;
+                console.log(readme);
+                var markdownText = (readme);
+                var htmlText = converter.makeHtml(markdownText);
+                document.getElementById("output").innerHTML = htmlText;
+            });
+    </script>
+</body>
+
+</html>
