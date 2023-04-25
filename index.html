@@ -18,6 +18,40 @@
             alert('朋友，上古浏览器不支持呢~');
         }
     </script>
+    <style>
+        /* 光明模式下的样式 */
+        
+        body {
+            background-color: #fff;
+            color: #333;
+        }
+        /* 暗黑模式下的样式 */
+        
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #333;
+                color: #fff;
+            }
+            #page {
+                background-color: #333;
+                color: #fff;
+            }
+            #aside_content .card-widget {
+                background-color: #333;
+                color: #fff;
+            }
+            .aplayer {
+                background-color: #333;
+                color: #fff;
+            }
+        }
+        /* 切换主题的class */
+        
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -45,6 +79,7 @@
                 <div class="aside_content" id="aside_content">
                     <div class="card-widget card-info">
                         <div class="card-content">
+                            <button id="theme-toggle">切换主题</button>
                             <div class="card-info-avatar is-center">
                                 <img class="avatar-img" src="/static/image/logo.png" alt="avatar">
                                 <div class="author-info__name">杨博旭</div>
@@ -194,7 +229,7 @@
     <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js" async></script>
     <!-- aplayer、meting -->
     <!-- require APlayer -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <link rel="stylesheet" href="/static/css/player.css">
     <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
     <!-- require MetingJS -->
     <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
@@ -298,6 +333,12 @@
                     document.title = OriginTitle;
                 }, 2000);
             }
+        });
+        const themeToggle = document.querySelector('#theme-toggle');
+        const body = document.querySelector('body');
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
         });
     </script>
 </body>
